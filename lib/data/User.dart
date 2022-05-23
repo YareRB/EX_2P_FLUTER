@@ -7,6 +7,6 @@ class User{
     this.password,
   );
 
-  static User usuario = User('yare','123');
+  static User usuario = User('Yare','123');
 }
 

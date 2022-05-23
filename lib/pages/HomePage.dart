@@ -16,16 +16,20 @@ class HomePage extends StatelessWidget {
                 ),
         
       ),
-      body: Column(
-          children: [
-            Center(
-              child: Text(
-                  'Hi ' + User.usuario.username! + "!",
-                  style: TextStyle(fontFamily: 'Tenor Sans', fontSize: 30, fontWeight: FontWeight.bold),
-                ),
-            )
-          ],
-        ),
+      body: Padding(
+        padding: const EdgeInsets.only(top: 15.0),
+        child: Column(
+            children: [
+              Center(
+                child: Text(
+                    'Hi ' + User.usuario.username! + "!",
+                    style: TextStyle(fontFamily: 'Tenor Sans', fontSize: 30, fontWeight: FontWeight.bold),
+                  ),
+              ),
+              
+            ],
+          ),
+      ),
         drawer: NavigationDrawerWidget(),
       
     );

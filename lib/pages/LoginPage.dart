@@ -2,9 +2,11 @@ import 'package:animate_do/animate_do.dart';
 import 'package:app_examen_2p_71688/data/User.dart';
 import 'package:app_examen_2p_71688/pages/HomePage.dart';
 import 'package:app_examen_2p_71688/utelerias/ColorPalette.dart';
+import 'package:app_examen_2p_71688/utelerias/GlobalAlert.dart';
 import 'package:app_examen_2p_71688/widgets/button_widget.dart';
 import 'package:app_examen_2p_71688/widgets/textfield_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:cool_alert/cool_alert.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -77,13 +79,24 @@ class LoginPage extends StatelessWidget {
                 onPressed: () {
                   if (_controllerUser.text.isEmpty ||
                       _controllerPassword.text.isEmpty) {
-                    //GlobalAlert.mensaje(context, 'mensaje', 'titulo');
+                    GlobalAlert.alertWarning(
+                        context,
+                        'Please complete the fields',
+                        'Empty Fields',
+                        ColorPalette.colorPink3);
                   } else {
-                    if (_controllerUser.value == User.usuario.username &&
-                        _controllerPassword == User.usuario.password)
+                    if (_controllerUser.text == User.usuario.username &&
+                        _controllerPassword.text == User.usuario.password) {
                       Navigator.of(context).pop();
-                    Navigator.of(context).push(MaterialPageRoute(
-                        builder: (BuildContext context) => const HomePage()));
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => const HomePage()));
+                    } else {
+                      GlobalAlert.alertError(
+                          context,
+                          'Please enter de correct credentials',
+                          'Wrong Credentials',
+                          ColorPalette.colorPink3);
+                    }
                   }
                 }),
           ),
