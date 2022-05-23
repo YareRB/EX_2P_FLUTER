@@ -88,7 +88,7 @@ Widget menuItem(IconData icon, String title, BuildContext context,
           style: const TextStyle(
               color: Colors.black, fontSize: 18, fontFamily: 'Tenor Sans')),
       onTap: () {
-        VariableGlobales.paramer = parameterConsult;
+        VariableGlobales.typeProduct = parameterConsult;
         VariableGlobales.titleType = title;
         Navigator.of(context).pop();
         Navigator.of(context).push(MaterialPageRoute(

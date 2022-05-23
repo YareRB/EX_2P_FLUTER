@@ -1,4 +1,5 @@
 import 'package:app_examen_2p_71688/pages/HomePage.dart';
+import 'package:app_examen_2p_71688/pages/LoginPage.dart';
 import 'package:app_examen_2p_71688/utelerias/ColorPalette.dart';
 import 'package:app_examen_2p_71688/widgets/NavigationDrawer.dart';
 import 'package:flutter/material.dart';
@@ -25,27 +26,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: ColorPalette.colorPinkMaterial4,
         ),
         home: Scaffold(
-          appBar: AppBar(
-            title: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: const [
-                Text(
-                  'YAMILU',
-                  style: TextStyle(fontFamily: 'Tenor Sans', fontSize: 22),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(left: 100,right: 5), //EdgeInsets.all(8.0),
-                  child: Icon(
-                    Icons.shopping_bag_outlined,
-                    size: 28.0,
-                    color: Colors.black,
-                  ),
-                ),
-              ],
-            ),
-          ),
-          body: HomePage(),
-          drawer: NavigationDrawerWidget(),
+          body: LoginPage(),
         ));
   }
 }
