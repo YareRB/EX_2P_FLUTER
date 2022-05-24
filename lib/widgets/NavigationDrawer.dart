@@ -1,5 +1,4 @@
 import 'package:app_examen_2p_71688/pages/AccountPage.dart';
-import 'package:app_examen_2p_71688/pages/HomePage.dart';
 import 'package:app_examen_2p_71688/pages/ProductsPAge.dart';
 import 'package:app_examen_2p_71688/utelerias/ColorPalette.dart';
 import 'package:app_examen_2p_71688/utelerias/VariableGlobales.dart';

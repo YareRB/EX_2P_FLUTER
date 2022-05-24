@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:app_examen_2p_71688/pages/HomePage.dart';
 import 'package:app_examen_2p_71688/utelerias/VariableGlobales.dart';
 import 'package:flutter/material.dart';
@@ -27,15 +28,17 @@ class DetailProductPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.only(top: 20, bottom: 15),
                     child: Center(
-                      child: Container(
-                          width: 250,
-                          height: 250,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                  fit: BoxFit.fitWidth,
-                                  image: NetworkImage(VariableGlobales
-                                      .productSelected.imageLink!)))),
+                      child: ZoomIn(
+                        child: Container(
+                            width: 250,
+                            height: 250,
+                            decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                    fit: BoxFit.fitWidth,
+                                    image: NetworkImage(VariableGlobales
+                                        .productSelected.imageLink!)))),
+                      ),
                     ),
                   ),
                   Padding(

@@ -1,6 +1,9 @@
 import 'package:app_examen_2p_71688/data/User.dart';
+import 'package:app_examen_2p_71688/utelerias/VariableGlobales.dart';
+import 'package:app_examen_2p_71688/widgets/carousel_widget.dart';
+import 'package:app_examen_2p_71688/widgets/grid_type_widget.dart';
 import 'package:flutter/material.dart';
-
+import 'package:carousel_slider/carousel_slider.dart';
 import '../widgets/NavigationDrawer.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,27 +14,31 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-                  'YAMILU',
-                  style: TextStyle(fontFamily: 'Tenor Sans', fontSize: 22),
-                ),
-        
+          'YAMILU',
+          style: TextStyle(fontFamily: 'Tenor Sans', fontSize: 22),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 15.0),
         child: Column(
-            children: [
-              Center(
-                child: Text(
-                    'Hi ' + User.usuario.username! + "!",
-                    style: TextStyle(fontFamily: 'Tenor Sans', fontSize: 30, fontWeight: FontWeight.bold),
-                  ),
+          children: [
+            Center(
+              child: Text(
+                'Hola ' + User.usuario.username! + " !",
+                style: TextStyle(
+                  fontFamily: 'Acme',
+                  fontSize: 30,
+                ),
               ),
-              
-            ],
-          ),
+            ),
+            const CarouselWidget(),
+            GridTypeWidget()
+          ],
+        ),
       ),
-        drawer: NavigationDrawerWidget(),
-      
+      drawer: NavigationDrawerWidget(),
     );
   }
 }
+
+class ProductsService {}

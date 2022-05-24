@@ -38,6 +38,7 @@ dependencies:
   http: ^0.13.4
   another_flushbar: ^1.10.29
   cool_alert: ^1.1.0
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +82,12 @@ flutter:
      - family: Tenor Sans
        fonts:
          - asset: assets/fonts/TenorSans-Regular.ttf
+     - family: Acme
+       fonts:
+         - asset: assets/fonts/Acme-Regular.ttf
+     - family:  Yamilu
+       fonts:
+         - asset: assets/fonts/Yamilu.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
