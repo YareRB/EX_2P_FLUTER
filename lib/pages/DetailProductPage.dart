@@ -1,5 +1,4 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:app_examen_2p_71688/pages/HomePage.dart';
 import 'package:app_examen_2p_71688/utelerias/VariableGlobales.dart';
 import 'package:flutter/material.dart';
 

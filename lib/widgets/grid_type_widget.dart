@@ -14,11 +14,17 @@ class GridTypeWidget extends StatelessWidget {
     return SizedBox(
         height: 250.0,
         child: ListView(
-          padding: const EdgeInsets.all(10),
           scrollDirection: Axis.horizontal, // deja hacer scroll
           children: [
             Column(
               children: [
+                const Padding(
+                  padding: EdgeInsets.only(left: 25.0),
+                  child: Text(
+                    'TYPE PRODUCTS',
+                    style: TextStyle(fontFamily: 'Tenor Sans', fontSize: 22),
+                  ),
+                ),
                 Row(
                   children: [
                     item(Yamilu.blush, "blush", "Blush", context),
@@ -28,19 +34,19 @@ class GridTypeWidget extends StatelessWidget {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 25.0),
+                  padding: const EdgeInsets.only(top: 22.0),
                   child: Row(
                     children: [
                       item(Yamilu.eyeshadow, "eyeshadow", "Eyeshadow", context),
-                      item(
-                          Yamilu.foundation, "foundation", "Foundation", context),
+                      item(Yamilu.foundation, "foundation", "Foundation",
+                          context),
                       item(Yamilu.lipliner, "lipliner", "Lip liner", context),
                       item(Yamilu.lipstick, "lipstick", "Lipstick", context),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 25.0),
+                  padding: const EdgeInsets.only(top: 22.0),
                   child: Row(
                     children: [
                       item(Yamilu.mascara_1, "mascara", "Mascara", context),

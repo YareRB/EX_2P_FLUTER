@@ -18,24 +18,19 @@ class _ProductsPageState extends State<ProductsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          VariableGlobales.titleType,
+        title: Text(VariableGlobales.titleType,
           style: TextStyle(fontFamily: 'Tenor Sans', fontSize: 22),
-        ),
-      ),
+        ),),
       body: FutureBuilder(
           future: productsService.getProductsByType(),
           builder: (BuildContext context, AsyncSnapshot snapshot) {
             if (!snapshot.hasData) {
               return const Center(
                 child: Text(
-                  'Loading...',
-                  style: TextStyle(
+                  'Loading...',style: TextStyle(
                       fontFamily: 'Tenor Sans',
-                      fontSize: 22,
-                      fontWeight: FontWeight.bold),
-                ),
-              );
+                      fontSize: 22,fontWeight: FontWeight.bold),
+                ),  );
             }
             return ListView.builder(
               itemCount: snapshot.requireData.length,
@@ -50,15 +45,13 @@ class _ProductsPageState extends State<ProductsPage> {
                       snapshot.requireData[index].name,
                       style: const TextStyle(
                           fontFamily: 'Tenor Sans',
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold),
+                          fontSize: 16,fontWeight: FontWeight.bold),
                     ),
                     subtitle: Text(
                       snapshot.requireData[index].priceSign +
                           snapshot.requireData[index].price,
                       style: const TextStyle(
-                          fontFamily: 'Tenor Sans',
-                          fontSize: 16),
+                          fontFamily: 'Tenor Sans',fontSize: 16),
                     ),
                     onTap: () {
                       VariableGlobales.productSelected =

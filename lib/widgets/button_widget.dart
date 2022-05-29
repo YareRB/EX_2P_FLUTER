@@ -40,8 +40,11 @@ class ButtonWidget extends StatelessWidget {
       borderRadius: BorderRadius.circular(4.0),
       child: Ink(
         decoration: BoxDecoration(
-          color: hasColor! ? ColorPalette.colorPink1 : otherColor! ? colorButton : ColorPalette.colorPink4
-        ),
+            color: hasColor!
+                ? ColorPalette.colorPink1
+                : otherColor!
+                    ? colorButton
+                    : ColorPalette.colorPink4),
         child: InkWell(
           borderRadius: BorderRadius.circular(10.0),
           onTap: onPressed,
@@ -49,17 +52,18 @@ class ButtonWidget extends StatelessWidget {
             height: height,
             width: width! < 0 ? MediaQuery.of(context).size.width : width,
             child: Center(
-              child: Text(
-                title!, 
-                style: TextStyle(
+                child: Text(
+              title!,
+              style: TextStyle(
                   fontFamily: 'Tenor Sans',
-                  color: hasColor! ? ColorPalette.colorPink4 : ColorPalette.colorPink1,
+                  color: hasColor!
+                      ? ColorPalette.colorPink4
+                      : ColorPalette.colorPink1,
                   fontWeight: FontWeight.w400,
-                  fontSize: fontSizeButton
-               ),)
-            ),
+                  fontSize: fontSizeButton),
+            )),
           ),
-          ),
+        ),
       ),
     );
   }

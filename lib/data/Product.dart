@@ -76,22 +76,3 @@ class Product {
     return data;
   }
 }
-
-class ProductColors {
-  String? hexValue;
-  String? colourName;
-
-  ProductColors({this.hexValue, this.colourName});
-
-  ProductColors.fromJson(Map<String, dynamic> json) {
-    hexValue = json['hex_value'];
-    colourName = json['colour_name'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['hex_value'] = this.hexValue;
-    data['colour_name'] = this.colourName;
-    return data;
-  }
-}

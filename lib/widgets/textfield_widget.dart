@@ -77,9 +77,16 @@ class TextFieldWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(4.0),
               borderSide: BorderSide(color: color!)),
           labelText: hintText,
-          prefixIcon: isPrefixIcon == false ? null : Icon(prefixIconData, size: 30, color: color,),
-          suffixIcon: isSuffixIcon == false ? null 
-          : GestureDetector(
+          prefixIcon: isPrefixIcon == false
+              ? null
+              : Icon(
+                  prefixIconData,
+                  size: 30,
+                  color: color,
+                ),
+          suffixIcon: isSuffixIcon == false
+              ? null
+              : GestureDetector(
                   onTap: onSuffixIconTap,
                   child: Icon(
                     suffixIconData,

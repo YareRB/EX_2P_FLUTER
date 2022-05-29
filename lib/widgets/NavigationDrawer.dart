@@ -1,7 +1,8 @@
-import 'package:app_examen_2p_71688/pages/AccountPage.dart';
+import 'package:app_examen_2p_71688/pages/LoginPage.dart';
 import 'package:app_examen_2p_71688/pages/ProductsPAge.dart';
 import 'package:app_examen_2p_71688/utelerias/ColorPalette.dart';
 import 'package:app_examen_2p_71688/utelerias/VariableGlobales.dart';
+import 'package:app_examen_2p_71688/yamilu_icons.dart';
 import 'package:flutter/material.dart';
 
 class NavigationDrawerWidget extends StatefulWidget {
@@ -41,29 +42,29 @@ class _NavigationDrawerWidgetState extends State<NavigationDrawerWidget> {
                   size: 30,
                 )),
           ),
-          menuItem(Icons.account_balance_sharp, "Blush", context, "blush"),
-          menuItem(Icons.access_time_filled_rounded, "Bronzer", context, "bronzer"),
-          menuItem(Icons.zoom_out_outlined, "Eyebrow", context, "eyebrow"),
-          menuItem(Icons.yard_sharp, "Eyeliner", context, "eyeliner"),
-          menuItem(Icons.workspaces_rounded, "Eyeshadow", context, "eyeshadow"),
-          menuItem(Icons.wine_bar_rounded, "Foundation", context, "foundation"),
-          menuItem(Icons.ad_units_rounded, "Lip Liner", context, "lip_liner"),
-          menuItem(Icons.wifi_channel, "Lipstick", context, "lipstick"),
-          menuItem(Icons.remove_red_eye, "Mascara", context, "mascara"),
-          menuItem(Icons.nights_stay_outlined, "Nail Polish", context,"nail_polish"),
+          menuItem(Yamilu.blush, "Blush", context, "blush"),
+          menuItem(Yamilu.bronzer, "Bronzer", context, "bronzer"),
+          menuItem(Yamilu.eyebrow, "Eyebrow", context, "eyebrow"),
+          menuItem(Yamilu.eyerliner, "Eyeliner", context, "eyeliner"),
+          menuItem(Yamilu.eyeshadow, "Eyeshadow", context, "eyeshadow"),
+          menuItem(Yamilu.foundation, "Foundation", context, "foundation"),
+          menuItem(Yamilu.lipliner, "Lip Liner", context, "lip_liner"),
+          menuItem(Yamilu.lipstick, "Lipstick", context, "lipstick"),
+          menuItem(Yamilu.mascara_1, "Mascara", context, "mascara"),
+          menuItem(Yamilu.foundation, "Nail Polish", context,"nail_polish"),
           Padding(
             padding: const EdgeInsets.only(left: 220),
             child: (Ink(
               child: ListTile(
                 leading: const Icon(
-                  Icons.settings,
+                  Icons.logout,
                   color: Colors.black,
                   size: 28,
                 ),
                 onTap: () {
                   Navigator.of(context).pop();
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (BuildContext context) => const AccountPage()));
+                      builder: (BuildContext context) => LoginPage()));
                 },
               ),
             )),
